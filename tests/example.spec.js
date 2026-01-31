@@ -171,6 +171,13 @@ test('Pos_Fun_0026 - Standard Singlish to Sinhala conversion is accurate.', asyn
 });
 
 
+test('Pos_UI_0001 - Clearing input resets UI.', async ({ page }) => {
+  await page.goto('https://www.swifttranslator.com/');
+  await page.getByRole('textbox', { name: 'Input Your Singlish Text Here.' }).fill('mata bath oonee → clear');
+  await page.getByText('Clear').click(); 
+  await expect(page.getByRole('textbox', { name: 'Input Your Singlish Text Here.' })).toBeEmpty();
+});
+
 
 
 test('Neg_Fun_0001 - Standard Singlish to Sinhala conversion is accurate.', async ({ page }) => {
@@ -198,48 +205,44 @@ test('Neg_Fun_0004 - Standard Singlish to Sinhala conversion is accurate.', asyn
   await page.getByText('ටිම්ස් මිටින් එකේ ලින්ක් එක වට්සෙප් කරන්න.').click();
 });
 
+
+
+
 test('Neg_Fun_0005 - Standard Singlish to Sinhala conversion is accurate.', async ({ page }) => {
-  await page.goto('https://www.swifttranslator.com/');
-  await page.getByRole('textbox', { name: 'Input Your Singlish Text Here.' }).fill('mama gedhara yanawa');
-  await page.getByText('මම ගෙදර යනවා').click();
-});
-
-
-test('Neg_Fun_0006 - Standard Singlish to Sinhala conversion is accurate.', async ({ page }) => {
   await page.goto('https://www.swifttranslator.com/');
   await page.getByRole('textbox', { name: 'Input Your Singlish Text Here.' }).fill('api passee\nkathaa karamu eka gaena.');
   await page.getByText('අපි පස්සේ\න්කතා කරමු එක ගැන.').click();
 });
 
 
-test('Neg_Fun_0007 - Standard Singlish to Sinhala conversion is accurate.', async ({ page }) => {
+test('Neg_Fun_0006 - Standard Singlish to Sinhala conversion is accurate.', async ({ page }) => {
   await page.goto('https://www.swifttranslator.com/');
   await page.getByRole('textbox', { name: 'Input Your Singlish Text Here.' }).fill('mama </br> gedhara');
   await page.getByText('මම ගෙදර').click();
 });
 
 
-test('Neg_Fun_0008 - Standard Singlish to Sinhala conversion is accurate.', async ({ page }) => {
+test('Neg_Fun_0007 - Standard Singlish to Sinhala conversion is accurate.', async ({ page }) => {
   await page.goto('https://www.swifttranslator.com/');
   await page.getByRole('textbox', { name: 'Input Your Singlish Text Here.' }).fill('m a m a g e d h a r a');
   await page.getByText('මම ගෙදර').click();
 });
 
 
-test('Neg_Fun_0009 - Standard Singlish to Sinhala conversion is accurate.', async ({ page }) => {
+test('Neg_Fun_0008 - Standard Singlish to Sinhala conversion is accurate.', async ({ page }) => {
   await page.goto('https://www.swifttranslator.com/');
   await page.getByRole('textbox', { name: 'Input Your Singlish Text Here.' }).fill('"dhitvaa suLi kuNaatuva samaGa aethi Wuu gQQvathura saha naayayaeem heethuven maarga sQQvarDhana aDhikaariya sathu maarga kotas 430k vinaashayata pathva aethi athara, ehi samastha dhiga pramaaNaya kiloomiitar 300k pamaNa vana bava pravaahana, mahaamaarga saha naagarika sQQvarDhana amaathYA bimal rathnaayaka saDHahan kaLeeya. meeka godak bayaanaka thathvayak nisaa okkoma parissamin inna oonea kiyalaa api hithanavaa. dhesaembar 25 nisaa traffic thivenna puLuvan."');
   await page.getByText('"දිට්වා සුළි කුණාටුව සමඟ ඇති වූ ගංවතුර සහ නායයෑම් හේතුවෙන් මාර්ග සංවර්ධන අධිකාරිය සතු මාර්ග කොටස් 430ක් විනාශයට පත්ව ඇති අතර, එහි සමස්ත දිග ප්‍රමාණය කිලෝමීටර් 300ක් පමණ වන බව ප්‍රවාහන, මහාමාර්ග සහ නාගරික සංවර්ධන අමාත්‍ය බිමල් රත්නායක සඳහන් කළේය. මේක ගොඩක් බයානක තත්වයක් නිසා ඔක්කොම පරිස්සමින් ඉන්න ඕනේ කියලා අපි හිතනවා. දෙසැම්බර් 25 නිසා traffic තිවෙන්න පුළුවන්."').click();
 });
 
-test('Neg_Fun_0010 - Standard Singlish to Sinhala conversion is accurate.', async ({ page }) => {
+test('Neg_Fun_0009 - Standard Singlish to Sinhala conversion is accurate.', async ({ page }) => {
   await page.goto('https://www.swifttranslator.com/');
   await page.getByRole('textbox', { name: 'Input Your Singlish Text Here.' }).fill('mama and nangi gamee giyaa.');
   await page.getByText('මම සහ නංගි ගමේ ගියා.').click();
 });
 
 
-test('Neg_Fun_0011 - Standard Singlish to Sinhala conversion is accurate.', async ({ page }) => {
+test('Neg_Fun_0010 - Standard Singlish to Sinhala conversion is accurate.', async ({ page }) => {
   await page.goto('https://www.swifttranslator.com/');
   await page.getByRole('textbox', { name: 'Input Your Singlish Text Here.' }).fill('dfdgrdhhhd');
   await page.getByText('ඩ්ෆ්ඩ්ග්‍රද්හ්හ්ඩ්').click();
