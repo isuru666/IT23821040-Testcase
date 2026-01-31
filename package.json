@@ -1,0 +1,22 @@
+{
+  "name": "it23821040",
+  "version": "1.0.0",
+  "description": "\"# IT23821040-Testcase\"",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isuru666/IT23821040-Testcase.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/isuru666/IT23821040-Testcase/issues"
+  },
+  "homepage": "https://github.com/isuru666/IT23821040-Testcase#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.58.0",
+    "@types/node": "^25.1.0"
+  }
+}
